@@ -1,0 +1,1 @@
+﻿Combustivel obj = new Combustivel(8, 3.45, 11, 5.7);
