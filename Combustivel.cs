@@ -32,9 +32,9 @@ class Combustivel : Carro
         double gastoGasolina = GastoGasolina();
 
         if (gastoAlcool > gastoGasolina)
-            retorno = "Compensa abastercer com Gasolina";
+            retorno = "Compensa abastecer com Gasolina";
         else
-            retorno = "Compensa abastercer com Alcool";
+            retorno = "Compensa abastecer com Alcool";
 
         Console.WriteLine(retorno);
     }
