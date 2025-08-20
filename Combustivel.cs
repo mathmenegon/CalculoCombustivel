@@ -2,15 +2,19 @@ using System;
 
 class Combustivel : Carro
 {
-    public double vAlcool = 3.45;
-    public double vGasolina = 5.50;
+    public double vAlcool;
+    public double vGasolina;
 
-    public Combustivel(double cAlcool, double cGasolina, double vAlcool, double vGasolina)
+    public Combustivel(double vAlcool, double vGasolina, double cAlcool, double cGasolina)
     {
+        this.vAlcool = vAlcool;
+        this.vGasolina = vGasolina;
+        this.cAlcool = cAlcool;
+        this.cGasolina = cGasolina;
 
+        ValorLitro();
         GastoLitro();
         GastoCarro();
-
         Consumo();
         
     }

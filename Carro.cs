@@ -2,8 +2,8 @@ using System;
 
 class Carro
 {
-    public double cAlcool = 8;
-    public double cGasolina = 11;
+    public double cAlcool;
+    public double cGasolina;
 
     public void GastoCarro()
     {
