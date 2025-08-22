@@ -2,12 +2,12 @@ using System;
 
 class Carro
 {
-    public double cAlcool;
-    public double cGasolina;
+    public double custoAlcool;
+    public double custoGasolina;
 
     public void GastoCarro()
     {
-        Console.WriteLine("Seu carro roda " + cAlcool + " Km/L no Alcool");
-        Console.WriteLine("Seu carro roda " + cGasolina + " Km/L na Gasolina");
+        Console.WriteLine("\nCarro com autonomia de " + custoAlcool + " Km/L no Alcool");
+        Console.WriteLine("Carro com autonomia de " + custoGasolina + " Km/L na Gasolina");
     }
 }

@@ -2,56 +2,56 @@ using System;
 
 class Combustivel : Carro
 {
-    public double vAlcool;
-    public double vGasolina;
+    public double valorAlcool;
+    public double valorGasolina;
 
-    public Combustivel(double vAlcool, double vGasolina, double cAlcool, double cGasolina)
+    public Combustivel(double valorAlcool, double valorGasolina, double custoAlcool, double custoGasolina)
     {
-        this.vAlcool = vAlcool;
-        this.vGasolina = vGasolina;
-        this.cAlcool = cAlcool;
-        this.cGasolina = cGasolina;
+        this.valorAlcool = valorAlcool;
+        this.valorGasolina = valorGasolina;
+        this.custoAlcool = custoAlcool;
+        this.custoGasolina = custoGasolina;
 
         ValorLitro();
-        GastoLitro();
         GastoCarro();
+        GastoLitro();
         Consumo();
         
     }
 
     public double GastoAlcool()
     {
-        return vAlcool / cAlcool;
+        return valorAlcool / custoAlcool;
     }
 
     public double GastoGasolina()
     {
-        return vGasolina / cGasolina;
-    }
-
-    public void Consumo()
-    {
-        var retorno = "Valor não informado corretamente";
-        double gastoAlcool = GastoAlcool();
-        double gastoGasolina = GastoGasolina();
-
-        if (gastoAlcool > gastoGasolina)
-            retorno = "Compensa abastecer com Gasolina";
-        else
-            retorno = "Compensa abastecer com Alcool";
-
-        Console.WriteLine(retorno);
+        return valorGasolina / custoGasolina;
     }
 
     public void ValorLitro()
     {
-        Console.WriteLine("Valor do Litro do Alcool " + vAlcool);
-        Console.WriteLine("Valor do Litro da Gasolina " + vGasolina);
+        Console.WriteLine("Valor do Litro do Alcool R$" + valorAlcool);
+        Console.WriteLine("Valor do Litro da Gasolina R$" + valorGasolina);
     }
 
     public void GastoLitro()
     {
-        Console.WriteLine("No Alcool seu carro gasta R$ " + GastoAlcool() + " por km rodado");
+        Console.WriteLine("\nNo Alcool seu carro gasta R$ " + GastoAlcool() + " por km rodado");
         Console.WriteLine("Na Gasolina seu carro gasta R$ " + GastoGasolina() + " por km rodado");
+    }
+
+    public void Consumo()
+    {
+        var retorno = "\nValor não informado corretamente";
+        double gastoAlcool = GastoAlcool();
+        double gastoGasolina = GastoGasolina();
+
+        if (gastoAlcool > gastoGasolina)
+            retorno = "\nCompensa abastecer com Gasolina";
+        else
+            retorno = "\nCompensa abastecer com Alcool";
+
+        Console.WriteLine(retorno);
     }
 }
