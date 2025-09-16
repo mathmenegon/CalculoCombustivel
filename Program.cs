@@ -1,1 +1,2 @@
-﻿Combustivel obj = new Combustivel(3.45, 5.50, 8, 11);
+﻿Combustivel obj = new Combustivel();
+obj.Main();
